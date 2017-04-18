@@ -1,13 +1,13 @@
 library(shiny)
 library(ggplot2)
 
-life_exp <- read.csv('/Users/Bckenstler/Documents/msan/msan622/asn2/data/API_SP.DYN.LE00.IN_DS2_en_csv_v2.csv', skip = 4, stringsAsFactors = FALSE)
+life_exp <- read.csv('data/API_SP.DYN.LE00.IN_DS2_en_csv_v2.csv', skip = 4, stringsAsFactors = FALSE)
 life_exp <- life_exp[life_exp$Country.Code != "INX",]
 
-fert_rates <- read.csv('/Users/Bckenstler/Documents/msan/msan622/asn2/data/API_SP.DYN.TFRT.IN_DS2_en_csv_v2.csv', skip = 4, stringsAsFactors = FALSE)
+fert_rates <- read.csv('data/API_SP.DYN.TFRT.IN_DS2_en_csv_v2.csv', skip = 4, stringsAsFactors = FALSE)
 fert_rates <- fert_rates[fert_rates$Country.Code != "INX",]
 
-meta <- read.csv('/Users/Bckenstler/Documents/msan/msan622/asn2/data/Metadata_Country_API_SP.DYN.LE00.IN_DS2_en_csv_v2.csv')
+meta <- read.csv('data/Metadata_Country_API_SP.DYN.LE00.IN_DS2_en_csv_v2.csv')
 
 
 ui <- fluidPage(
